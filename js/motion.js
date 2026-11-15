@@ -62,16 +62,36 @@ if (window.matchMedia("(pointer: coarse)").matches) {
   escena?.style.setProperty("transform", "none");
 }
 
-const form = document.querySelector("#contacto form");
+
+const formulario = document.querySelector("#contacto form");
 const aviso = document.querySelector("#aviso-form");
 
-form.addEventListener("submit", (evento) => {
-    evento.preventDefault();
-    const datos = new FormData(form);
-    const nombre = String(datos.get("nombre") || "").trim();
-    aviso.textContent = `Gracias${nombre ? `, ${nombre}` : ""}. Este formulario todavía no envía el mensaje: escribime por GitHub y te respondo.`;
-    form.reset();
-});
+if (formulario && aviso) {
+    formulario.addEventListener("submit", async (evento) => {
+        evento.preventDefault();
+
+        aviso.textContent = "Enviando mensaje...";
+
+        try {
+            const respuesta = await fetch(formulario.action, {
+                method: "POST",
+                body: new FormData(formulario),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (respuesta.ok) {
+                aviso.textContent = "¡Tu mensaje se envió correctamente! Gracias por escribirme ❤️";
+                formulario.reset();
+            } else {
+                aviso.textContent = "No se pudo enviar el mensaje. Intentá nuevamente.";
+            }
+        } catch (error) {
+            aviso.textContent = "Hubo un error de conexión. Intentá nuevamente.";
+        }
+    });
+}
 
 pintarProgreso();
 window.addEventListener("scroll", pintarProgreso, { passive: true });
