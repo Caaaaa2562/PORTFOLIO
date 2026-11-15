@@ -173,18 +173,47 @@
           <h2 class="reveal">Contame la idea. La convertimos en interfaz.</h2>
           <p class="reveal">Escribime y te respondo a la brevedad. También me encontrás en <a href="https://github.com/Caaaaa2562" target="_blank" rel="noopener">GitHub</a>.</p>
         </div>
-        <form class="reveal" action="#" method="post">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
-          <label for="apellido">Apellido</label>
-          <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" autocomplete="tel">
-          <button type="submit" class="boton"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
-          <p id="aviso-form" class="aviso" role="status"></p>
+
+        <form class="reveal"
+            action="https://formspree.io/f/xkjrjbry"
+            method="POST">
+
+            <label for="nombre">Nombre</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                autocomplete="name"
+                required
+            >
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                autocomplete="email"
+                required
+            >
+
+            <label for="mensaje">Mensaje</label>
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Contame en qué puedo ayudarte..."
+                required
+            ></textarea>
+
+            <button type="submit" class="boton">
+                <i class="fa-solid fa-paper-plane"></i>
+                Enviar mensaje
+            </button>
+
         </form>
+
       </div>
     </section>
 

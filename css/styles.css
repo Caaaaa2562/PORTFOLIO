@@ -560,3 +560,26 @@ footer {
   .skills b::after { width: var(--nivel, 70%); }
   html { scroll-behavior: auto; }
 }
+
+#contacto textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 14px;
+    border: 1px solid #d8c9c0;
+    border-radius: 12px;
+    background: #fffaf6;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#contacto textarea:focus {
+    border-color: #783b50;
+}
+
+#contacto textarea::placeholder {
+    color: #a99a93;
+}
+

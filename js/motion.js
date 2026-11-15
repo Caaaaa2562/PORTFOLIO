@@ -66,11 +66,11 @@ const form = document.querySelector("#contacto form");
 const aviso = document.querySelector("#aviso-form");
 
 form.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  const datos = new FormData(form);
-  const nombre = String(datos.get("nombre") || "").trim();
-  aviso.textContent = `Gracias${nombre ? `, ${nombre}` : ""}. Este formulario todavía no envía el mensaje: escribime por GitHub y te respondo.`;
-  form.reset();
+    evento.preventDefault();
+    const datos = new FormData(form);
+    const nombre = String(datos.get("nombre") || "").trim();
+    aviso.textContent = `Gracias${nombre ? `, ${nombre}` : ""}. Este formulario todavía no envía el mensaje: escribime por GitHub y te respondo.`;
+    form.reset();
 });
 
 pintarProgreso();
