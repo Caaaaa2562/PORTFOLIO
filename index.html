@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Tu Nombre, desarrollador/a Frontend">
-  <title>Tu Nombre | Portfolio Frontend</title>
-  <!-- Google Fonts y Font Awesome -->
+  <meta name="description" content="Portfolio de Carla Guisande, diseñadora y desarrolladora frontend en Buenos Aires. Interfaces en movimiento, claras y centradas en la experiencia.">
+  <title>Carla Guisande | Portfolio Frontend</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,680;1,9..144,560&family=Outfit:wght@360;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- CSS externo -->
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
+  <a class="saltar" href="#inicio">Saltar al contenido</a>
+  <div class="progreso" aria-hidden="true"><span id="progreso"></span></div>
+
   <header id="cabecera">
-    <nav>
+    <a class="marca" href="#inicio" aria-label="Inicio">CG</a>
+    <nav aria-label="Secciones">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -24,93 +28,173 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+    <a class="marca-git" href="https://github.com/Caaaaa2562" target="_blank" rel="noopener" aria-label="GitHub de Carla Guisande">
+      <i class="fa-brands fa-github"></i>
+    </a>
   </header>
 
   <main>
 
-    <!-- Portada -->
     <section id="inicio">
-      <div class="portada-texto">
-        <h1>Hola, soy Carla Guisande</h1>
-        <p>Estudiante de desarrollo Frontend en el IFTS 16. Construyo páginas claras, rápidas y que se ven bien en cualquier pantalla.</p>
-        <a class="boton" href="#contacto"><i class="fa-solid fa-paper-plane"></i> Hablemos</a>
+      <div class="orbe orbe-a" aria-hidden="true"></div>
+      <div class="orbe orbe-b" aria-hidden="true"></div>
+      <div class="orbe orbe-c" aria-hidden="true"></div>
+
+      <div class="portada">
+        <div class="portada-texto">
+          <p class="estado"><span class="pulso" aria-hidden="true"></span> Buenos Aires · buscando mi primer rol en desarrollo</p>
+          <h1>Hola, soy <em>Carla Guisande</em></h1>
+          <p class="rol">
+            Diseño
+            <span class="rol-ventana">
+              <span class="rol-pista">
+                <span>interfaces</span>
+                <span>experiencias</span>
+                <span>productos web</span>
+                <span>interfaces</span>
+              </span>
+            </span>
+          </p>
+          <p class="bajada">Consultora funcional SAP FI y estudiante de Desarrollo de Software. Armo sitios claros, con movimiento y pensados para quien los usa.</p>
+          <div class="acciones">
+            <a class="boton" href="#contacto"><i class="fa-solid fa-paper-plane"></i> Hablemos</a>
+            <a class="boton boton-suave" href="#que-hago">Ver qué hago</a>
+          </div>
+        </div>
+
+        <aside class="escena" aria-hidden="true">
+          <div class="ventana">
+            <div class="ventana-bar">
+              <span></span><span></span><span></span>
+              <small>interfaz.viva</small>
+            </div>
+            <div class="ventana-cuerpo">
+              <div class="ui-fila">
+                <span>Experiencia</span>
+                <strong>en movimiento</strong>
+              </div>
+              <div class="ui-cards">
+                <article>
+                  <i class="fa-solid fa-code"></i>
+                  <b>Web</b>
+                  <em></em>
+                </article>
+                <article>
+                  <i class="fa-solid fa-pen-ruler"></i>
+                  <b>UI</b>
+                  <em></em>
+                </article>
+                <article>
+                  <i class="fa-solid fa-route"></i>
+                  <b>UX</b>
+                  <em></em>
+                </article>
+              </div>
+              <div class="ui-lista">
+                <p><span>Claridad</span><i></i></p>
+                <p><span>Ritmo</span><i></i></p>
+                <p><span>Detalle</span><i></i></p>
+              </div>
+              <div class="cursor-falso"></div>
+            </div>
+          </div>
+        </aside>
       </div>
+
+      <a class="bajar" href="#sobre-mi" aria-label="Bajar a sobre mí">
+        <span></span>
+      </a>
     </section>
 
-    <!-- Sobre mí -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta-pista">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>UX / UI</span><span>Node.js</span><span>PHP</span><span>PostgreSQL</span><span>MySQL</span><span>Python</span><span>Git</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>UX / UI</span><span>Node.js</span><span>PHP</span><span>PostgreSQL</span><span>MySQL</span><span>Python</span><span>Git</span>
+      </div>
+    </div>
+
     <section id="sobre-mi">
-      <h2>Sobre mí</h2>
+      <p class="indice reveal">01 — Sobre mí</p>
+      <h2 class="reveal">Una mirada de procesos, llevada al diseño de interfaces.</h2>
       <div class="fila">
-       <img src="assets/img/perfil.jpg" alt="Foto de perfil de Tu Nombre" width="300" height="300">
-        <article>
-          <p>Soy de Buenos Aires y estoy cursando la tecnicatura en desarrollo de software. Me gusta transformar una idea en algo que se pueda ver y usar en el navegador.</p>
-          <p>Aprendo practicando: cada trabajo práctico es una oportunidad para mejorar mi código. Busco mi primera experiencia profesional en un equipo donde pueda seguir creciendo.</p>
-          <p><strong>Intereses:</strong> diseño web, accesibilidad, música y fotografía.</p>
+        <figure class="retrato reveal">
+          <img src="assets/img/perfil.jpg" alt="Foto de perfil de Carla Guisande" width="640" height="800">
+          <figcaption>Buenos Aires, Argentina</figcaption>
+        </figure>
+        <article class="bio">
+          <p class="reveal">Soy de Buenos Aires, Argentina, y actualmente estudio Desarrollo de Software. Me desempeño como Consultora Funcional SAP FI, una experiencia que me permite desarrollar habilidades de análisis, resolución de problemas y comprensión de procesos de negocio.</p>
+          <p class="reveal">En paralelo, continúo formándome en desarrollo de software, ampliando mis conocimientos y trabajando en proyectos personales con el objetivo de dar mis primeros pasos profesionales como desarrolladora.</p>
+          <p class="reveal">Me interesa especialmente el desarrollo web, el diseño y la creación de interfaces intuitivas y atractivas. Disfruto transformar ideas en proyectos funcionales, explorar nuevas tecnologías y aprender constantemente sobre desarrollo Frontend, Backend y experiencia de usuario (UX/UI).</p>
         </article>
       </div>
     </section>
 
-    <!-- Qué hago -->
     <section id="que-hago">
-      <h2>Qué hago</h2>
-      <div class="fila bloques">
-        <article>
-          <h3><i class="fa-solid fa-code"></i> Maquetación web</h3>
-          <p>Convierto diseños en páginas HTML y CSS semánticas, ordenadas y fáciles de mantener.</p>
+      <p class="indice reveal">02 — Qué hago</p>
+      <h2 class="reveal">Del proceso de negocio a una interfaz que se siente bien.</h2>
+      <div class="bloques">
+        <article class="tarjeta reveal">
+          <span class="num">01</span>
+          <h3><i class="fa-solid fa-code"></i> Desarrollo web</h3>
+          <p>Diseño y desarrollo de sitios web modernos, funcionales y adaptables a diferentes dispositivos.</p>
         </article>
-        <article>
-          <h3><i class="fa-solid fa-mobile-screen"></i> Diseño responsivo</h3>
-          <p>Adapto cada sitio a celulares, tablets y computadoras usando Flexbox y media queries.</p>
+        <article class="tarjeta reveal">
+          <span class="num">02</span>
+          <h3><i class="fa-solid fa-mobile-screen"></i> Diseño de aplicaciones</h3>
+          <p>Creación y diseño de aplicaciones intuitivas, atractivas y centradas en la experiencia del usuario.</p>
         </article>
-        <article>
+        <article class="tarjeta reveal">
+          <span class="num">03</span>
           <h3><i class="fa-solid fa-gauge-high"></i> Optimización</h3>
-          <p>Comprimo imágenes y escribo código limpio para que la página cargue rápido.</p>
+          <p>Mejora del rendimiento, la usabilidad y la eficiencia de sitios web y aplicaciones.</p>
         </article>
       </div>
     </section>
 
-    <!-- Tecnologías (tabla) -->
     <section id="tecnologias">
-      <h2>Tecnologías y hobbies</h2>
-      <div class="tabla-contenedor">
-        <table>
-          <thead>
-            <tr><th>Categoría</th><th>Detalle</th><th>Nivel</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Conozco</td><td>HTML5</td><td>Intermedio</td></tr>
-            <tr><td>Conozco</td><td>CSS3 y Flexbox</td><td>Intermedio</td></tr>
-            <tr><td>Conozco</td><td>Git y GitHub</td><td>Básico</td></tr>
-            <tr><td>Quiero aprender</td><td>JavaScript</td><td>En camino</td></tr>
-            <tr><td>Quiero aprender</td><td>React</td><td>Pendiente</td></tr>
-            <tr><td>Hobby</td><td>Fotografía</td><td>-</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <p class="indice reveal">03 — Tecnologías</p>
+      <h2 class="reveal">Herramientas con las que estoy construyendo.</h2>
+      <ul class="skills">
+        <li class="reveal"><span>HTML</span><small>Avanzado</small><b data-nivel="92"></b></li>
+        <li class="reveal"><span>CSS y Flexbox</span><small>Avanzado</small><b data-nivel="90"></b></li>
+        <li class="reveal"><span>JavaScript</span><small>Intermedio / Alto</small><b data-nivel="78"></b></li>
+        <li class="reveal"><span>Node.js y PHP</span><small>Intermedio / Alto</small><b data-nivel="74"></b></li>
+        <li class="reveal"><span>PostgreSQL y MySQL</span><small>Intermedio / Alto</small><b data-nivel="72"></b></li>
+        <li class="reveal"><span>Git y GitHub</span><small>Intermedio</small><b data-nivel="64"></b></li>
+        <li class="reveal"><span>React</span><small>Básico</small><b data-nivel="40"></b></li>
+        <li class="reveal"><span>Python</span><small>Básico</small><b data-nivel="36"></b></li>
+      </ul>
     </section>
 
-    <!-- Contacto (formulario sin funcionalidad) -->
     <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Escribime y te respondo a la brevedad. También me encontrás en <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>.</p>
-      <form action="#" method="post">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono">
-        <button type="submit" class="boton"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
-      </form>
+      <p class="indice reveal">04 — Contacto</p>
+      <div class="contacto-grid">
+        <div>
+          <h2 class="reveal">Contame la idea. La convertimos en interfaz.</h2>
+          <p class="reveal">Escribime y te respondo a la brevedad. También me encontrás en <a href="https://github.com/Caaaaa2562" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+        <form class="reveal" action="#" method="post">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+          <button type="submit" class="boton"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          <p id="aviso-form" class="aviso" role="status"></p>
+        </form>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    <p>&copy; 2026 Tu Nombre · IFTS 16</p>
+    <p>&copy; 2026 Carla Guisande · Buenos Aires</p>
+    <a href="#inicio">Volver arriba</a>
   </footer>
 
+  <script src="js/motion.js"></script>
 </body>
 </html>
