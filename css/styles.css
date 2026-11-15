@@ -1,0 +1,147 @@
+/*///////////////// AJUSTES GENERALES //////////////////*/
+:root {
+  --tinta: #2f3e36;      /* verde oscuro (textos) */
+  --papel: #fbf7f5;      /* fondo blanco rosado */
+  --acento: #8a2f4b;     /* bordó / vino tinto */
+  --rosa: #f3e4e6;       /* rosa suave */
+  --salvia: #e3ebe4;     /* verde claro */
+  --linea: #e8dcdc;      /* bordes finos */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 100%; }
+
+body {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 1.1rem;           /* unidad relativa */
+  line-height: 1.7;
+  color: var(--tinta);
+  background-color: var(--papel);
+}
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; line-height: 1.15; }
+h2 { font-size: 2.6rem; margin-bottom: 2rem; text-align: center; }
+h3 { font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--acento); }
+p + p { margin-top: 1rem; }
+
+/* Pseudoclases de enlaces (orden: link, visited, hover, active) */
+a:link    { color: var(--acento); }
+a:visited { color: #6b2a40; }
+a:hover   { color: var(--tinta); text-decoration: underline; }
+a:active  { color: var(--tinta); }
+
+/* Secciones: width relativo (%), centradas con margin auto */
+main > section { width: 90%; max-width: 1000px; margin: 0 auto; padding: 5rem 0; }
+
+/* Combinador directo: solo los <img> hijos de .fila */
+.fila > img {
+  width: 300px; height: 300px; object-fit: cover;
+  border-radius: 50%; border: 8px solid var(--rosa);
+}
+
+/*__________________ Cabecera / nav __________________*/
+#cabecera {
+  position: sticky; top: 0; z-index: 10;
+  background-color: var(--papel);
+  border-bottom: 1px solid var(--linea);
+}
+/* Combinador descendiente: ul dentro de nav */
+nav ul { list-style-type: none; display: flex; justify-content: center; gap: 2.5rem; padding: 1.2rem; }
+nav a:link, nav a:visited { color: var(--tinta); text-decoration: none; font-size: 1rem; }
+nav a:hover { color: var(--acento); }
+
+/*__________________ Portada __________________*/
+#inicio {
+  position: relative;               /* referencia para el círculo decorativo */
+  width: 100%;
+  max-width: none;
+  height: 75vh;                     /* vh en height */
+  min-height: 420px;
+  margin: 0;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+/* Círculo rosa suave detrás del texto, con opacidad */
+#inicio::before {
+  content: ""; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 440px; height: 440px; border-radius: 50%;
+  background-color: var(--rosa); opacity: 0.8; z-index: 1;
+}
+/* z-index mayor: el texto queda encima del círculo */
+.portada-texto { position: relative; z-index: 2; width: 80%; max-width: 560px; }
+.portada-texto h1 { font-size: 4rem; margin-bottom: 1rem; }
+.portada-texto p { margin-bottom: 2rem; }
+
+/*__________________ Botones __________________*/
+.boton, button.boton {
+  display: inline-block; padding: 0.7rem 1.8rem;
+  border: 1px solid var(--acento); border-radius: 50px;
+  background-color: transparent; color: var(--acento);
+  font: 600 1rem 'Source Sans 3', Arial, sans-serif; text-decoration: none; cursor: pointer;
+}
+.boton:link, .boton:visited { color: var(--acento); }
+.boton:hover { background-color: var(--acento); color: #fff; text-decoration: none; }
+
+/*__________________ Sobre mí / Qué hago __________________*/
+.fila { display: flex; align-items: center; justify-content: center; gap: 3rem; }
+.fila > article { flex: 1; }
+.bloques { align-items: stretch; }
+.bloques > article {
+  background-color: #fff; padding: 2rem 1.5rem;
+  border: 1px solid var(--linea); border-radius: 16px; text-align: center;
+}
+.bloques i { display: block; margin-bottom: 0.8rem; font-size: 1.4rem; color: var(--acento); }
+
+/*__________________ Tabla __________________*/
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background-color: #fff; border: 1px solid var(--linea); }
+th { background-color: var(--acento); color: #fff; text-align: left; font-weight: 600; }
+th, td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--linea); }
+tr:nth-child(even) { background-color: var(--rosa); }    /* filas pares */
+tr:nth-child(odd)  { background-color: #ffffff; }        /* filas impares */
+tbody tr:hover { background-color: var(--salvia); }
+
+/*__________________ Formulario __________________*/
+#contacto { text-align: center; }
+form { display: flex; flex-direction: column; width: 100%; max-width: 480px; margin: 2rem auto 0; text-align: left; }
+label { font-size: 0.95rem; margin: 1rem 0 0.3rem; }
+input { padding: 0.8rem 1rem; border: 1px solid var(--linea); border-radius: 10px; background-color: #fff; font: inherit; }
+input:focus { outline: none; border-color: var(--acento); }
+form button { align-self: center; margin-top: 2rem; }
+
+/*__________________ Footer __________________*/
+footer { border-top: 1px solid var(--linea); text-align: center; padding: 2rem; font-size: 0.9rem; }
+
+/* TODO (mejoras futuras): agregar proyectos reales, foto propia comprimida (<500kb) y validación con JavaScript */
+
+/*///////////////// RESPONSIVE //////////////////*/
+/* Tablet horizontal */
+@media (max-width: 1080px) {
+  .portada-texto h1 { font-size: 3.4rem; }
+  .fila { gap: 1.5rem; }
+}
+/* Tablet vertical */
+@media (max-width: 768px) {
+  .fila { flex-direction: column; text-align: center; }
+  nav ul { gap: 1.2rem; flex-wrap: wrap; }
+  .portada-texto h1 { font-size: 3rem; }
+  #inicio::before { width: 340px; height: 340px; }
+}
+/* Mobil 1 */
+@media (max-width: 480px) {
+  body { font-size: 1rem; }
+  h2 { font-size: 2.1rem; }
+  .fila > img { width: 200px; height: 200px; }
+  .portada-texto h1 { font-size: 2.4rem; }
+  #inicio::before { width: 280px; height: 280px; }
+  th, td { padding: 0.5rem; font-size: 0.9rem; }
+}
+/* Mobil 2 */
+@media (max-width: 375px) {
+  nav ul { gap: 0.8rem; font-size: 0.9rem; }
+  .portada-texto h1 { font-size: 2rem; }
+  main > section { padding: 3rem 0; }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Tu Nombre, desarrollador/a Frontend">
+  <title>Tu Nombre | Portfolio Frontend</title>
+  <!-- Google Fonts y Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header id="cabecera">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#que-hago">Qué hago</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section id="inicio">
+      <div class="portada-texto">
+        <h1>Hola, soy Carla Guisande</h1>
+        <p>Estudiante de desarrollo Frontend en el IFTS 16. Construyo páginas claras, rápidas y que se ven bien en cualquier pantalla.</p>
+        <a class="boton" href="#contacto"><i class="fa-solid fa-paper-plane"></i> Hablemos</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <div class="fila">
+       <img src="assets/img/perfil.jpg" alt="Foto de perfil de Tu Nombre" width="300" height="300">
+        <article>
+          <p>Soy de Buenos Aires y estoy cursando la tecnicatura en desarrollo de software. Me gusta transformar una idea en algo que se pueda ver y usar en el navegador.</p>
+          <p>Aprendo practicando: cada trabajo práctico es una oportunidad para mejorar mi código. Busco mi primera experiencia profesional en un equipo donde pueda seguir creciendo.</p>
+          <p><strong>Intereses:</strong> diseño web, accesibilidad, música y fotografía.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Qué hago -->
+    <section id="que-hago">
+      <h2>Qué hago</h2>
+      <div class="fila bloques">
+        <article>
+          <h3><i class="fa-solid fa-code"></i> Maquetación web</h3>
+          <p>Convierto diseños en páginas HTML y CSS semánticas, ordenadas y fáciles de mantener.</p>
+        </article>
+        <article>
+          <h3><i class="fa-solid fa-mobile-screen"></i> Diseño responsivo</h3>
+          <p>Adapto cada sitio a celulares, tablets y computadoras usando Flexbox y media queries.</p>
+        </article>
+        <article>
+          <h3><i class="fa-solid fa-gauge-high"></i> Optimización</h3>
+          <p>Comprimo imágenes y escribo código limpio para que la página cargue rápido.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tecnologías (tabla) -->
+    <section id="tecnologias">
+      <h2>Tecnologías y hobbies</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr><th>Categoría</th><th>Detalle</th><th>Nivel</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Conozco</td><td>HTML5</td><td>Intermedio</td></tr>
+            <tr><td>Conozco</td><td>CSS3 y Flexbox</td><td>Intermedio</td></tr>
+            <tr><td>Conozco</td><td>Git y GitHub</td><td>Básico</td></tr>
+            <tr><td>Quiero aprender</td><td>JavaScript</td><td>En camino</td></tr>
+            <tr><td>Quiero aprender</td><td>React</td><td>Pendiente</td></tr>
+            <tr><td>Hobby</td><td>Fotografía</td><td>-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Contacto (formulario sin funcionalidad) -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Escribime y te respondo a la brevedad. También me encontrás en <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>.</p>
+      <form action="#" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono">
+        <button type="submit" class="boton"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Tu Nombre · IFTS 16</p>
+  </footer>
+
+</body>
+</html>
